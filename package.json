@@ -1,4 +1,8 @@
 {
+  
+  
+  
+
   "name": "cypress_open-cart",
   "version": "1.0.0",
   "description": "Testing Open_Cart",
@@ -12,4 +16,7 @@
     "cypress": "^13.6.6",
     "cypress-xpath": "^2.0.1"
   }
+  
 }
+
+
