@@ -9,19 +9,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v3
         with:
-          node-version: 21
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build application
-        run: npm run build
-
-      - name: Start application
-        run: npm start
+          node-version: '20.x'
 
       - name: Cypress run
         uses: cypress-io/github-action@v3
+        with:
+           build: npm run build
+           start: npm start
+
