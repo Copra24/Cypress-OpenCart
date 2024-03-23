@@ -9,8 +9,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 21
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build
+
+      - name: Start application
+        run: npm start
+
       - name: Cypress run
         uses: cypress-io/github-action@v3
-        with:
-           build: npm run build
-           start: npm start
