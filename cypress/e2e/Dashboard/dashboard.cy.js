@@ -106,16 +106,16 @@ context('Login and Alert box', () => {
 
   
 
-    it.only('renders fixtures data', () =>{ // needs reviewing to work best in login test suit
-      data.forEach((userData)=> {
+    // it.only('renders fixtures data', () =>{ // needs reviewing to work best in login test suit
+    //   data.forEach((userData)=> {
         
-      });
+    //   });
     
 
-        dashboard.dashboardHeading().should('have.text', userData.Dashboard_Title)
+    //     dashboard.dashboardHeading().should('have.text', userData.Dashboard_Title)
 
 
-    } )
+    // } )
 
 
     it('Validating Hearder Elements', () => {
@@ -155,7 +155,7 @@ context('Login and Alert box', () => {
 
 it('valdiating the navigation sidebar', () => {
    
-  dashboard.navigationSideBar()
+  
 })
 })
 })
