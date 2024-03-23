@@ -9,9 +9,11 @@ class Dashloard{
    }
 
    dashboardHeading(){
-    return cy.xpath('//*[@id="content"]/div[1]/div/h1')
-    //.should('contain.text', 'Dashboard')
-    //.should('have.css', 'font-size', '30px')
+    return cy.get('h1').eq(0)
+    .should('have.text', 'Dashboard')
+    .should('have.css', 'font-size', '30px')
+    .should('have.css', 'color', '30px')
+    
 
    }
 
@@ -20,9 +22,9 @@ class Dashloard{
     
    }
 
-   navigationSideBar(){
-      return cy.get('#column-left').should('exist')
-   }
+   // navigationSideBar(){
+   //    return cy.get('#column-left').should('exist')
+   // }
 
 
 
