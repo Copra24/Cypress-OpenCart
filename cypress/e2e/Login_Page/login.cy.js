@@ -12,9 +12,16 @@ context('Login and Alert box', () => {
 
     
   })
+  
 
 
   describe('Validating login functionality', () => {
+
+    // it('render navigation menu', () => {
+    //   cy.visit('/menu')
+    //   cy.get('#menu-catalog').find('li').first()
+    //   .should('not.have.class', 'active')
+    // })
 
     it('Footer and Logo Validation', () => {
 

@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+
 import General_Pom from "../POMs/General_Pom"
 import LoginPage from "../POMs/Login_page"
 import Dashloard from "../POMs/dashboard"
@@ -8,8 +9,16 @@ const general_pom = new General_Pom()
 const dashboard = new Dashloard()
 
 context('Login and Alert box', () => {
-  beforeEach(() => {
+  let userData
+  before(() => {
     cy.visit('https://demo.opencart.com/admin/index.php?route=common/login')
+
+    
+    cy.fixture('example.json').then((data) =>{
+
+      userData = data
+
+    })
 
    
 
@@ -95,6 +104,19 @@ context('Login and Alert box', () => {
 
   describe('Validating Dashboard Functionality', () => {
 
+  
+
+    it.only('renders fixtures data', () =>{ // needs reviewing to work best in login test suit
+      data.forEach((userData)=> {
+        
+      });
+    
+
+        dashboard.dashboardHeading().should('have.text', userData.Dashboard_Title)
+
+
+    } )
+
 
     it('Validating Hearder Elements', () => {
 
@@ -124,20 +146,16 @@ context('Login and Alert box', () => {
       .should('be.visible')
       .should('contain.text', 'No results!')
 
-
-
-
-
-
-
-
-
-
-   
-
+      //Validating the dashboard heading
+      dashboard.dashboardHeading()
 
     
 
+})
+
+it('valdiating the navigation sidebar', () => {
+   
+  dashboard.navigationSideBar()
 })
 })
 })

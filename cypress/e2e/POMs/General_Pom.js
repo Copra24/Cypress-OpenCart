@@ -16,13 +16,4 @@ class General_Pom{
 
 
 
-
-
-
-
-
-
-
-
-
 }export default General_Pom
